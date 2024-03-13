@@ -24,7 +24,29 @@ const SplashScreen = ({ onFinish }) => {
           Welcome to Paradise
         </Text>
         <Container position="absolute" bottom="0" p={4}>
-          <Progress value={progress} size="xs" colorScheme="green" />
+          <Progress
+            size="xs"
+            colorScheme="green"
+            isIndeterminate
+            sx={{
+              "&[data-indeterminate] > div:first-of-type": {
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "0%",
+                animation: "0.6s linear 0s infinite normal none running progress-indeterminate",
+              },
+            }}
+          />
+          <style>
+            {`
+              @keyframes progress-indeterminate {
+                0% { width: 0%; }
+                50% { width: 100%; }
+                100% { width: 0%; }
+              }
+            `}
+          </style>
         </Container>
       </VStack>
     </Center>
