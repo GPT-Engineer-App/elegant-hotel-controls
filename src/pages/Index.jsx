@@ -26,7 +26,7 @@ const Index = () => {
           </Text>
         </VStack>
       </Center>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
         <ServiceCard icon={<FaConciergeBell />} title="Housekeeping" description="Need your room cleaned or extra amenities?" />
         <ServiceCard icon={<FaPhone />} title="Contact Lobby" description="Questions or special requests? We're here to help." />
         <ServiceCard icon={<FaUtensils />} title="Restaurant Service" description="Explore our menu and order directly to your room." />
