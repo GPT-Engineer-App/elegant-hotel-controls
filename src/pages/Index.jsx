@@ -11,9 +11,6 @@ const Index = () => {
       </Box>
       <Heading size="md">{title}</Heading>
       <Text>{description}</Text>
-      <Button colorScheme="teal" variant="outline">
-        Contact
-      </Button>
     </VStack>
   );
 
