@@ -1,11 +1,14 @@
 import { Box, Button, Container, Heading, SimpleGrid, Text, VStack, Image, Center, useColorModeValue } from "@chakra-ui/react";
 import { FaConciergeBell, FaUtensils, FaSpa, FaTaxi, FaCalendarAlt, FaPhone, FaMapMarkedAlt, FaExclamationTriangle, FaCommentDots } from "react-icons/fa";
 
+import { useNavigate } from "react-router-dom";
+
 const Index = () => {
+  const navigate = useNavigate();
   const cardBackgroundColor = useColorModeValue("gray.100", "gray.700");
 
   const ServiceCard = ({ icon, title, description }) => (
-    <VStack p={5} bg={cardBackgroundColor} boxShadow="md" rounded="md" align="start" spacing={3}>
+    <VStack p={5} bg={cardBackgroundColor} boxShadow="md" rounded="md" align="start" spacing={3} onClick={() => navigate(`/services/${title.toLowerCase()}`, { state: { service: { title, description } } })} cursor="pointer">
       <Box fontSize="3xl" color="teal.500">
         {icon}
       </Box>
