@@ -1,5 +1,5 @@
 import { Box, Button, Container, Heading, SimpleGrid, Text, VStack, Image, Center, useColorModeValue } from "@chakra-ui/react";
-import { FaConciergeBell, FaUtensils, FaSpa, FaTaxi, FaCalendarAlt, FaPhone } from "react-icons/fa";
+import { FaConciergeBell, FaUtensils, FaSpa, FaTaxi, FaCalendarAlt, FaPhone, FaMapMarkedAlt, FaExclamationTriangle, FaCommentDots } from "react-icons/fa";
 
 const Index = () => {
   const cardBackgroundColor = useColorModeValue("gray.100", "gray.700");
@@ -37,6 +37,10 @@ const Index = () => {
         <ServiceCard icon={<FaCalendarAlt />} title="Book an Activity" description="Discover and reserve exciting local activities." />
         <ServiceCard icon={<FaCalendarAlt />} title="Events Schedule" description="Stay updated with the hotel's events and activities." />
         <ServiceCard icon={<FaTaxi />} title="Transportation" description="Need a ride? Let us arrange your transportation." />
+        <ServiceCard icon={<FaUtensils />} title="Room Service" description="Choose from our exquisite in-room dining options." />
+        <ServiceCard icon={<FaMapMarkedAlt />} title="Local Attractions" description="Discover nearby attractions and landmarks." />
+        <ServiceCard icon={<FaExclamationTriangle />} title="Emergency Contacts" description="Immediate assistance for any emergency situation." />
+        <ServiceCard icon={<FaCommentDots />} title="Feedback & Support" description="Share your experience or get help with any issues." />
       </SimpleGrid>
     </Container>
   );
